@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>Dialog</class>
- <widget class="QDialog" name="Dialog">
+ <class>GeniQ</class>
+ <widget class="QDialog" name="GeniQ">
   <property name="geometry">
    <rect>
     <x>0</x>
@@ -10,63 +10,68 @@
     <height>480</height>
    </rect>
   </property>
-  <property name="mouseTracking">
-   <bool>false</bool>
-  </property>
   <property name="windowTitle">
-   <string>Dialog</string>
+   <string>Music Search</string>
   </property>
-  <widget class="QLineEdit" name="lineEdit">
-   <property name="geometry">
-    <rect>
-     <x>80</x>
-     <y>290</y>
-     <width>481</width>
-     <height>41</height>
-    </rect>
-   </property>
-  </widget>
-  <widget class="QPushButton" name="pushButton">
-   <property name="geometry">
-    <rect>
-     <x>260</x>
-     <y>340</y>
-     <width>113</width>
-     <height>32</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>Search</string>
-   </property>
-  </widget>
+  <property name="styleSheet">
+   <string>
+      QDialog {
+          background: qlineargradient(
+              spread:pad, x1:0, y1:0, x2:1, y2:1,
+              stop:0 #1e1e2e, stop:1 #282a36
+          );
+          color: #ffffff;
+      }
+      QPushButton {
+          background-color: #7f5af0;
+          color: white;
+          border-radius: 8px;
+          padding: 6px;
+      }
+      QPushButton:hover {
+          background-color: #624fc6;
+      }
+      QLineEdit {
+          background-color: #2c2c3c;
+          border: 1px solid #7f5af0;
+          border-radius: 5px;
+          color: white;
+          padding-left: 10px;
+      }
+   </string>
+  </property>
   <widget class="QLabel" name="label">
    <property name="geometry">
     <rect>
-     <x>190</x>
-     <y>50</y>
-     <width>551</width>
-     <height>161</height>
+     <x>49</x>
+     <y>40</y>
+     <width>541</width>
+     <height>111</height>
     </rect>
    </property>
-   <property name="font">
-    <font>
-     <family>Futura</family>
-     <pointsize>64</pointsize>
-     <weight>75</weight>
-     <bold>true</bold>
-    </font>
-   </property>
    <property name="text">
-    <string>Text me</string>
+    <string>
+      &lt;html&gt;
+       &lt;head/&gt;
+       &lt;body&gt;
+        &lt;p style=&quot;font-family:'Marker Felt'; font-size:64px; text-align:center; color:white;&quot;&gt;
+         Welcome to &lt;span style=&quot;color:#ff79c6;&quot;&gt;GeniQ&lt;/span&gt;
+        &lt;/p&gt;
+       &lt;/body&gt;
+      &lt;/html&gt;
+     </string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
    </property>
   </widget>
   <widget class="QLabel" name="label_2">
    <property name="geometry">
     <rect>
-     <x>160</x>
+     <x>120</x>
      <y>150</y>
-     <width>541</width>
-     <height>71</height>
+     <width>400</width>
+     <height>101</height>
     </rect>
    </property>
    <property name="font">
@@ -78,7 +83,45 @@
     </font>
    </property>
    <property name="text">
-    <string>the name of track</string>
+    <string>Just text
+the name of track</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="lineEdit">
+   <property name="geometry">
+    <rect>
+     <x>80</x>
+     <y>290</y>
+     <width>480</width>
+     <height>40</height>
+    </rect>
+   </property>
+   <property name="placeholderText">
+    <string>Enter track name...</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton">
+   <property name="geometry">
+    <rect>
+     <x>260</x>
+     <y>340</y>
+     <width>120</width>
+     <height>40</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Futura</family>
+     <pointsize>18</pointsize>
+     <weight>75</weight>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="text">
+    <string>Search</string>
    </property>
   </widget>
  </widget>
